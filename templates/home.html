@@ -1,0 +1,14 @@
+<ion-view ng-controller="homeCtrl">
+<ion-header-bar class="bar-stable">
+	<a ng-href="#/settingsUrl">settings</a><h1 class="title">Nasa Picture of the Day</h1>
+</ion-header-bar>
+<ion-content>
+<div class="home" ng-repeat="day in nasaData">
+<h3>{{day.title}}</h3>
+<h3>{{day.date}}</h3>
+<p>{{day.explanation}}</p>
+<img ng-if="day.media_type == 'image'" ng-src="{{day.url}}"/>
+<iframe width="500" height="400" ng-if="day.media_type == 'video'" ng-src="{{trustSrc(day.url)}}"/></iframe>
+</div>
+</ion-content>
+</ion-view>

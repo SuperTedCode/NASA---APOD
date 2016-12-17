@@ -1,0 +1,16 @@
+<ion-view ng-controller="settingsCtrl">
+<ion-header-bar class="bar-stable">
+	<a ng-href="#/homeUrl">Nasa Picture of the Day</a><h1 class="title">settings</h1>
+</ion-header-bar>
+<ion-content>
+
+ <div class="list">
+  <div class="item item-divider" radio-group="dayCount">Show Pictures from</div>
+	<ion-radio ng-model="choice" ng-value="1" ng-click="update(choice)">Today</ion-radio>
+	<ion-radio ng-model="choice" ng-value="7" ng-click="update(choice)">Last 7 Days</ion-radio>
+	<ion-radio ng-model="choice" ng-value="14" ng-click="update(choice)">Last 14 Days</ion-radio>
+ </div>
+
+</ion-content>
+
+</ion-view>
